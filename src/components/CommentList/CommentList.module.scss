@@ -1,0 +1,17 @@
+.root {
+    position: relative;
+    width: 100%;
+}
+
+.container {
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+}
+
+
+.over {
+    width: fit-content !important;
+    position: absolute;
+    visibility: hidden;
+}

@@ -1,0 +1,135 @@
+.root {
+    table-layout: fixed;
+    width: 100%;
+    max-width: 100%;
+    background-color: #FFF;
+    border-radius: 8px;
+    text-wrap: nowrap;
+    border-spacing: 0;
+
+    thead {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+
+        td {
+            color: #71869D;
+        }
+    }
+
+    th {
+        width: 100%;
+        display: flex;
+    }
+
+    td {
+        padding: 16px 20px 16px 0;
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 400;
+
+        p {
+
+            font-weight: 400;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: start;
+
+            span {
+                color: #71869D;
+            }
+        }
+    }
+
+    tr {
+        padding-right: 20px;
+        height: 50px;
+        display: flex;
+
+    }
+}
+
+.date {
+    text-align: start;
+    max-width: 200px;
+    min-width: 148px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 28px !important;
+    flex-shrink: 0;
+}
+
+.person {
+    text-align: start;
+    min-width: 280px;
+    max-width: 1fr;
+    flex-shrink: 5;
+}
+
+.event {
+    width: 100%;
+    min-width: 200px;
+    flex-shrink: 12;
+}
+
+.type {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+
+}
+
+.summ {
+    text-align: end;
+    width: 140px;
+    max-width: 140px;
+    flex-shrink: 0;
+}
+
+.recipient {
+    text-align: start;
+    /* min-width: 250px; */
+    min-width: 200px;
+    width: 100%;
+    max-width: 1fr;
+    flex-shrink: 10;
+}
+
+
+
+
+
+
+.lable {
+    height: 24px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    background-color: #F1F4F9;
+    border-radius: 4px;
+
+    span {
+        color: #71869D;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+}
+
+.row {
+    height: 48px;
+    max-height: 48px;
+    position: relative;
+    transition: all 0.15s;
+    cursor: pointer;
+}
+
+.border {
+    position: absolute;
+    left: 28px;
+    border-top: 1px solid #EAF0FA;
+    width: calc(100% - 56px);
+}
