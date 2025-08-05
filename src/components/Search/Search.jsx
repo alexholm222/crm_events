@@ -25,8 +25,8 @@ const Search = ({ isFetching }) => {
 
     useEffect(() => {
         setTimeout(() => {
-            setQuery(localStorage.getItem('searchQueryBills'))
-            localStorage.getItem('searchQueryBills').length > 0 && !load && setDone(true)
+            setQuery(localStorage.getItem('searchQueryEvents') || '')
+            localStorage.getItem('searchQueryEvents')?.length > 0 && !load && setDone(true)
         }, 200)
     }, [search])
 
@@ -53,14 +53,14 @@ const Search = ({ isFetching }) => {
         setDone(false)
         setQuery(value)
         value.length === 0 && dispatch(setSearchQuery(''))
-        localStorage.setItem('searchQueryBills', value)
+        localStorage.setItem('searchQueryEvents', value)
     }
 
     const handleReset = () => {
         setDone(false)
         dispatch(setSearchQuery(''))
         setQuery('')
-        localStorage.setItem('searchQueryBills', '')
+        localStorage.setItem('searchQueryEvents', '')
 
     }
 
@@ -92,8 +92,8 @@ const Search = ({ isFetching }) => {
 
     return (
         <div onKeyDown={handleKeyPress} onClick={handleOnFocus} className={classNames(s.root, active && s.root_active)}>
-            <div className={classNames(s.icons, (active || query.length > 0) && !load && !done && s.icons_hidden)}>
-                {!load && !done && <IconSearch className={classNames(s.icon, (active || query.length > 0 || isFetching) && s.icon_hidden)} />}
+            <div className={classNames(s.icons, (active || query?.length > 0) && !load && !done && s.icons_hidden)}>
+                {!load && !done && <IconSearch className={classNames(s.icon, (active || query?.length > 0 || isFetching) && s.icon_hidden)} />}
                 {done && <IconDone />}
                 <LoaderCircle vis={load} />
             </div>

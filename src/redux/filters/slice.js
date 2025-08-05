@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  search: localStorage.getItem('searchQueryBills') || '',
+  search: localStorage.getItem('searchQueryEvents') || '',
   filterType: [],
   filterPerson: [],
 
